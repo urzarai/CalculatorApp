@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e1e1e, #3d3d3d);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.calc {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.display {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    text-align: right;
+    color: white;
+}
+
+#history {
+    min-height: 20px;
+    font-size: 15px;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+#input {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 25px;
+    font-size: 18px;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+button:active {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(0.95);
+}
+
+.operator {
+    background: rgba(255, 165, 0, 0.2);
+    color: #ffa500;
+}
+
+.operator:hover {
+    background: rgba(255, 165, 0, 0.3);
+}
+
+.special {
+    background: rgba(255, 59, 59, 0.2);
+    color: #ff3b3b;
+}
+
+.special:hover {
+    background: rgba(255, 59, 59, 0.3);
+}
+
+.equals {
+    background: rgba(0, 255, 128, 0.2);
+    color: #00ff80;
+}
+
+.equals:hover {
+    background: rgba(0, 255, 128, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+    
+    button {
+        padding: 20px;
+        font-size: 16px;
+    }
+    
+    #input {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 320px) {
+    button {
+        padding: 15px;
+        font-size: 14px;
+    }
+    
+    #input {
+        font-size: 28px;
+    }
+    
+    .display {
+        padding: 15px;
+    }
+}
